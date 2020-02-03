@@ -1,5 +1,3 @@
-//import.java.util.*
-
 class Main {
     companion object {
         val tampilan = Tampilan()
@@ -7,10 +5,10 @@ class Main {
         @JvmStatic
         fun main(args: Array<String>) {
             tampilan.menu()
-            var player1 = tampilan.inputPlayer(1)
+            val player1 = tampilan.inputPlayer(1)
             val player2 = tampilan.inputPlayer(2)
-
-            print(tampilan.hasil(player1, player2))
+            val janken = Janken(player1, player2)
+            print(janken.hasil())
         }
     }
 }
