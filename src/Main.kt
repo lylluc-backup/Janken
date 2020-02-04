@@ -5,9 +5,11 @@ class Main {
         @JvmStatic
         fun main(args: Array<String>) {
             tampilan.menu()
-            val player1 = tampilan.inputPlayer(1)
-            val player2 = tampilan.inputPlayer(2)
-            val janken = Janken(player1, player2)
+            val player1 = Player(1)
+            player1.setInputPlayer()
+            val player2 = Player(2)
+            player2.setInputPlayer()
+            val janken = Janken(player1.inputPlayer, player2.inputPlayer)
             print(janken.hasil())
         }
     }

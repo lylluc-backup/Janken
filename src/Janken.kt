@@ -1,12 +1,12 @@
-class Janken(val player1: String, val player2: String) {
+class Janken(val inputPlayer1: String, val inputPlayer2: String) {
 
     fun hasil(): String {
         val hasil: String
 
         print("\nHasil:\n")
-        if ((player1 == "batu" && player2 == "gunting") || (player1 == "gunting" && player2 == "kertas") || (player1 == "kertas" && player2 == "batu")) {
+        if ((inputPlayer1 == "batu" && inputPlayer2 == "gunting") || (inputPlayer1 == "gunting" && inputPlayer2 == "kertas") || (inputPlayer1 == "kertas" && inputPlayer2 == "batu")) {
             hasil = "Pemain 1 MENANG!"
-        } else if (player1 == player2) {
+        } else if (inputPlayer1 == inputPlayer2) {
             hasil = "DRAW!"
         } else {
             hasil = "Pemain 2 MENANG!"
